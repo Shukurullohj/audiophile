@@ -103,6 +103,10 @@ body {
   color: var(--color-dark);
 }
 
+ul {
+  margin: 0;
+}
+
 a {
   margin: 0;
   text-decoration: none;
