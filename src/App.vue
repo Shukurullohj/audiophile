@@ -1,12 +1,6 @@
 <template>
     <div>
-        <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
-        <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-        <a href="" class="button--shop">
-          <span class="button--shop__text">SHOP</span>
-          <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-        </a>
-        <app-footer v-bind:title="title"></app-footer>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -15,6 +9,7 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Ninjas from './components/Ninjas.vue';
+import Headphones from './components/Headphones.vue'
 
 export default {
     components: {
@@ -32,13 +27,10 @@ export default {
               {name: 'Kami', speciality: 'Webpack', show: false},
               {name: 'Yoshi', speciality: 'Data Diggin', show: false}
           ],
-          title: 'Vue Wizards'
         }
     },
     methods: {
-      updateTitle: function(updatedTitle){
-        this.title = updatedTitle;
-      }
+      
     }
 }
 </script>
@@ -51,7 +43,7 @@ html {
 }
 :root {
   --color-orange: #d87d4a;
-  --color-black: #101010;
+  --color-black: #1a1a1a;
   --color-light: #f1f1f1;
   --color-white-light: #fafafa;
   --color-orange-light: #fbaf85;
@@ -86,7 +78,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -99,7 +91,7 @@ body {
   line-height: 25px;
   font-size: 15px;
   font-family: 'Manrope', "Arial", sans-serif;
-  background-color: var(--color-light);
+  background-color: var(--color-white);
   color: var(--color-dark);
 }
 
@@ -118,11 +110,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 .container {
-  max-width: 1200px;
   padding-left: 24px;
   padding-right: 24px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .button {
@@ -131,6 +120,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-orange);
   color: var(--color-white);
   padding: 15px 31px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+
 }
 
 .button:hover {
@@ -167,21 +163,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-orange);
   opacity: 1;
 }
+
 @media screen and (min-width:768px) {
     .container {
     padding-left: 40px;
     padding-right: 40px;
-    margin-left: auto;
-    margin-right: auto;
   }
+
 }
 
-@media screen and (min-width:1100px) {
+@media screen and (min-width:1110px) {
     .container {
     padding-left: 165px;
     padding-right: 165px;
-    margin-left: auto;
-    margin-right: auto;
   }
+
 }
 </style>

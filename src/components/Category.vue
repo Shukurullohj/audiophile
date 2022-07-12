@@ -1,0 +1,110 @@
+<template>
+    <div class="category">
+        <div class="category__list">
+            <div class="category__item">
+                <img class="category__img" width="80" height="104" src="../img/headphone-icon.svg" alt="">
+                <p class="category__text">headphones</p>
+                <button class="button-shop">
+                <p class="button-shop__text">shop</p>
+                <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
+                </button>
+            </div>
+            <div class="category__item">
+                <img class="category__img" width="80" height="104" src="../img/speaker-icon.svg" alt="">
+                <p class="category__text">speakers</p>
+                <button class="button-shop">
+                <p class="button-shop__text">shop</p>
+                <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
+                </button>
+            </div>
+            <div class="category__item">
+                <img class="category__img" width="80" height="104" src="../img/earphone-icon.svg" alt="">
+                <p class="category__text">earphones</p>
+                <button class="button-shop">
+                <p class="button-shop__text">shop</p>
+                <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+export default {
+    data () {
+        return {
+        }
+    },
+}
+</script>
+
+<style>
+
+
+  .category__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 85px 24px 35px;
+    background-color: var(--color-white);
+  }
+
+  .category__item {
+    position: relative;
+    width: 327px;
+    height: 165px;
+    background-color: var(--color-light);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: auto 24px;
+  }
+
+  .category__item:not(:last-child) {
+    margin-bottom: 68px;
+  }
+
+  .category__img {
+    position: relative;
+    top: -30%;
+    filter: drop-shadow(1px 18px 28px var(--color-black));
+  }
+
+  .category__text {
+    margin-top: -30px;
+    margin-bottom: 15px;
+  }
+
+  .button-shop {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+@media screen and (min-width:768px) {
+
+  .category__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 68px;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 120px;
+    }
+
+    .category__item {
+      width: 223px;
+    }
+
+    .category__item:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+}
+</style>

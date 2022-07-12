@@ -45,12 +45,11 @@
     </footer>
 </template>
 <script>
+import Menu from './Menu.vue';
+
 export default {
-    props: {
-      title: {
-        type: String,
-        required: true
-      }
+    components: {
+        'app-menu': Menu,
     },
     data(){
         return{
@@ -185,8 +184,7 @@ footer{
         width: 100%;
         flex-flow: nowrap;
     }
-    .footer__sitelogo {
-    }
+    
     .nav__list {
         justify-content: end;
     }
