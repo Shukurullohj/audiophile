@@ -324,10 +324,6 @@ export default {
             text-align: left;
         }
 
-        .showcase--zx7 {
-            margin: 0 95px;
-        }
-
 
         .showcase__img-wrapper {
             position: absolute;

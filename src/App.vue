@@ -9,7 +9,6 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Ninjas from './components/Ninjas.vue';
-import Headphones from './components/Headphones.vue'
 
 export default {
     components: {

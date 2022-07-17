@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="menu">
+      <div v-if="showMenu" class="menu">
           <div class="menu__list">
               <div class="menu__item">
                   <img class="menu__img" width="80" height="104" src="../img/headphone-icon.svg" alt="">
@@ -36,6 +36,7 @@
 export default {
     data () {
         return {
+          showMenu : false
         }
     },
 }

@@ -106,5 +106,9 @@ export default {
 }
 
 @media screen and (min-width:1100px) {
+    .category__item {
+      width: 350px;
+      height: 204px;
+    }
 }
 </style>

@@ -2,15 +2,15 @@
     <div>
         <app-header></app-header>
           <div>
-            <section class="headphones">
+            <section class="categories">
               <div class="container">
-                <h2 class="headphones__title">Headphones</h2>
-                <div v-for="headphone in headphones" :key="headphone.id"  class="headphones__content">
-                  <img class="headphones__img" :src="require(`../img/headphones/desktop/${headphone.img}`)" alt="">
+                <h2 class="categories__title">Speakers</h2>
+                <div v-for="category in categories" :key="category.id"  class="categories__content">
+                  <img class="categories__img" :src="require(`../../img/speakers/${category.img}`)" alt="">
                   <div  class="showcase">
                     <h4 class="showcase__title">New product</h4>
-                    <h2 class="showcase__product-name">{{headphone.name}}</h2>
-                    <p class="showcase__text">{{headphone.text}}</p>
+                    <h2 class="showcase__product-name">{{category.name}}</h2>
+                    <p class="showcase__text">{{category.text}}</p>
                     <button class="button showcase__button">See product</button>
                   </div>
                 </div>
@@ -26,11 +26,11 @@
 
 <script>
 // Imports
-import Menu from './Menu.vue';
-import Header from './Header.vue';
-import Footer from './Footer.vue';
-import About from './About.vue';
-import Category from './Category.vue';
+import Menu from '../Menu.vue';
+import Header from '../Header.vue';
+import Footer from '../Footer.vue';
+import About from '../About.vue';
+import Category from '../Category.vue';
 
 export default {
     components: {
@@ -42,10 +42,9 @@ export default {
     },
     data () {
         return {
-          headphones: [
-            {name: 'XX99 mark ii Headphones', text: 'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go', img: 'image-xx99-mark-two.jpg'},
-            {name: 'XX99 mark ii Headphones', text: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.', img: 'image-xx99-mark-one.jpg'},
-            {name: 'XX99 mark ii Headphones', text: 'Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.', img: 'image-xx59.jpg'},
+          categories: [
+            {name: 'ZX9 SPEAKER', text: 'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.', img: 'zx9.jpg'},
+            {name: 'ZX7 SPEAKER', text: 'The new XX99 Mark II categories is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.', img: 'zx7.jpg'},
           ]
         }
     },
@@ -58,7 +57,7 @@ export default {
 <style scoped>
 
 
-.headphones__title {
+.categories__title {
   padding: 32px;
   color: var(--color-white);
   background-color: var(--color-black);
@@ -73,7 +72,7 @@ export default {
   margin-bottom: 64px;
 }
 
-.headphones__img{
+.categories__img{
   width: 100%;
   height: 320px;
   margin-bottom: 32px;
@@ -118,14 +117,14 @@ export default {
 
 @media screen and (min-width: 768px) {
 
-.headphones__title {
+.categories__title {
   margin-left: -40px;
   margin-right: -40px;
 }
 }
 @media screen and (min-width: 1100px) {
 
-.headphones__title {
+.categories__title {
   margin-left: -165px;
   margin-right: -165px;
   margin-bottom: 160px;
@@ -134,12 +133,12 @@ export default {
   line-height: 44px;
   letter-spacing: 1.5px
 }
-.headphones__content {
+.categories__content {
   display: flex;
   justify-content: space-between;
   margin-bottom: 160px;
 }
-.headphones__img {
+.categories__img {
   width: 540px;
   height: 570px;
 }
@@ -150,10 +149,10 @@ export default {
   align-items: start;
   margin-left: 125px;
 }
-.headphones__content:nth-child(3) .headphones__img {
+.categories__content:nth-child(3) .categories__img {
   order: 1;
 }
-.headphones__content:nth-child(3) .showcase {
+.categories__content:nth-child(3) .showcase {
   margin-left: 0;
   margin-right: 125px;
 }

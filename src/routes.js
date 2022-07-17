@@ -1,15 +1,15 @@
 import Home from './components/home/Home.vue'
-import Headphones from './components/Headphones.vue'
-import Speakers from './components/Speakers.vue'
-import Earphones from './components/Earphones.vue'
-import DetialXX991 from './components/DetialXX991.vue'
-import DetialXX992 from './components/DetialXX992.vue'
+import Headphones from './components/categories/Headphones.vue'
+import Speakers from './components/categories/Speakers.vue'
+import Earphones from './components/categories/Earphones.vue'
+import DetailZX9 from './components/detail/DetailZX9.vue'
+import DetailZX7 from './components/detail/DetailZX7.vue'
 
 export default [
     { path: '/', component : Home},
     {path: '/headphones', component: Headphones},
     {path: '/earphones', component: Earphones},
     {path: '/speakers', component: Speakers},
-    {path: '/detail', component: DetialXX991},
-    {path: '/detail99xxll', component: DetialXX992}
+    {path: '/zx9', component: DetailZX9},
+    {path: '/zx7', component: DetailZX7}
 ]
