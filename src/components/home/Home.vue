@@ -46,29 +46,8 @@ html {
   --color-dark: #000000;
 }
 
-@font-face {
-    font-family: 'Manrope';
-    src: local("Manrope"), url('/fonts/Manrope-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
-@font-face {
-    font-family: 'Manrope';
-    src: local("Manrope"), url('/fonts/Manrope-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: local("Manrope"), url('/fonts/Manrope-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
 
 *,
 *::before,
@@ -115,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-orange);
   color: var(--color-white);
   padding: 15px 31px;
+  cursor: pointer;
 }
 
 .button:hover {

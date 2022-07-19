@@ -4,14 +4,15 @@
           <div>
             <section class="categories">
               <div class="container">
-                <h2 class="categories__title">categories</h2>
+                <h2 class="categories__title">Headphones</h2>
                 <div v-for="category in categories" :key="category.id"  class="categories__content">
                   <img class="categories__img" :src="require(`../../img/headphones/desktop/${category.img}`)" alt="">
                   <div  class="showcase">
                     <h4 class="showcase__title">New product</h4>
                     <h2 class="showcase__product-name">{{category.name}}</h2>
                     <p class="showcase__text">{{category.text}}</p>
-                    <button class="button showcase__button">See product</button>
+                    <router-link :to="`/product/${category.slug}`">
+                    <button class="button showcase__button">See product</button></router-link>
                   </div>
                 </div>
                 <app-category></app-category>
@@ -43,9 +44,9 @@ export default {
     data () {
         return {
           categories: [
-            {name: 'XX99 mark ii Headphones', text: 'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go', img: 'image-xx99-mark-two.jpg'},
-            {name: 'XX99 mark ii Headphones', text: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.', img: 'image-xx99-mark-one.jpg'},
-            {name: 'XX99 mark ii Headphones', text: 'Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.', img: 'image-xx59.jpg'},
+            {"slug": "xx99-mark-two-headphones", name: 'XX99 mark ii Headphones', text: 'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go', img: 'image-xx99-mark-two.jpg'},
+            {"slug": "xx59-headphones", name: 'XX59 Headphones', text: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.', img: 'image-xx99-mark-one.jpg'},
+            {"slug": "xx99-mark-one-headphones", name: 'XX99 mark i Headphones', text: 'Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.', img: 'image-xx59.jpg'},
           ]
         }
     },

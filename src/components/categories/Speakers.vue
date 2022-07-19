@@ -11,7 +11,8 @@
                     <h4 class="showcase__title">New product</h4>
                     <h2 class="showcase__product-name">{{category.name}}</h2>
                     <p class="showcase__text">{{category.text}}</p>
-                    <button class="button showcase__button">See product</button>
+                    <router-link :to="`/product/${category.slug}`">
+                    <button class="button showcase__button">See product</button></router-link>
                   </div>
                 </div>
                 <app-category></app-category>
@@ -43,8 +44,8 @@ export default {
     data () {
         return {
           categories: [
-            {name: 'ZX9 SPEAKER', text: 'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.', img: 'zx9.jpg'},
-            {name: 'ZX7 SPEAKER', text: 'The new XX99 Mark II categories is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.', img: 'zx7.jpg'},
+            {"slug": 'zx7-speaker', name: 'ZX9 SPEAKER', text: 'Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.', img: 'zx9.jpg'},
+            {"slug": 'zx9-speaker', name: 'ZX7 SPEAKER', text: 'The new XX99 Mark II categories is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.', img: 'zx7.jpg'},
           ]
         }
     },

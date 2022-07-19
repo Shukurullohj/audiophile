@@ -4,14 +4,15 @@
           <div>
             <section class="categories">
               <div class="container">
-                <h2 class="categories__title">Speakers</h2>
+                <h2 class="categories__title">Earphones</h2>
                 <div v-for="category in categories" :key="category.id"  class="categories__content">
                   <img class="categories__img" :src="require(`../../img/earphones/${category.img}`)" alt="">
                   <div  class="showcase">
                     <h4 class="showcase__title">New product</h4>
                     <h2 class="showcase__product-name">{{category.name}}</h2>
                     <p class="showcase__text">{{category.text}}</p>
-                    <button class="button showcase__button">See product</button>
+                    <router-link :to="`/product/${category.slug}`">
+                    <button class="button showcase__button">See product</button></router-link>
                   </div>
                 </div>
                 <app-category></app-category>
@@ -43,7 +44,7 @@ export default {
     data () {
         return {
           categories: [
-            {name: 'YX1 EARPHONES', text: 'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.', img: 'yx1.jpg'},
+            {"slug": 'yx1-earphones', name: 'YX1 EARPHONES', text: 'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.', img: 'yx1.jpg'},
           ]
         }
     },

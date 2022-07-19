@@ -6,12 +6,12 @@
               <div class="container">
               <a href="/" class="back-button">Go Back</a>
                 <div  class="product">
-                  <div class="product__img"></div>
+                  <div class="product__img" :style="productImg"></div>
                   <div class="product__content">
                     <h4 class="product__title">New product</h4>
-                    <h2 class="product__product-name">ZX7 SPEAKER</h2>
-                    <p class="product__text">Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.</p>
-                    <p class="product__price">$ 3.500</p>
+                    <h2 class="product__product-name">ZX9 SPEAKER</h2>
+                    <p class="product__text">Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
+                    <p class="product__price">$ 4.500</p>
                     <div class="product__footer">
                       <div class="cart-amount">
                       <i>-</i><p>1</p><i>+</i>
@@ -103,7 +103,10 @@ export default {
               {name: 'ZX9 SPEAKER', img: 'zx9.jpg'},
               {name: 'ZX7 SPEAKER', img: 'zx7.jpg'},
               {name: 'ZX7 SPEAKER', img: 'zx7.jpg'},
-          ]
+          ],
+          productImg: {
+            backgroundImage: `url(${require('../../img/product-zx9-speaker/mobile/image-product.jpg')})`
+          }
         }
     },
     methods: {
@@ -156,7 +159,7 @@ export default {
 }
 
 .product__img {
-  background: url('../../img/product-zx7-speaker/mobile/image-product.jpg')no-repeat center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -265,15 +268,15 @@ export default {
   border-radius: 10px;
 }
 .product__photo-first {
-  background: url('../../img/product-zx7-speaker/mobile/image-gallery-1.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/mobile/image-gallery-1.jpg')no-repeat center;
   background-size: cover;
 }
 .product__photo-second {
-  background: url('../../img/product-zx7-speaker/mobile/image-gallery-2.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/mobile/image-gallery-2.jpg')no-repeat center;
   background-size: cover;
 }
 .product__photo-third {
-  background: url('../../img/product-zx7-speaker/mobile/image-gallery-3.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/mobile/image-gallery-3.jpg')no-repeat center;
   height: 368px;
   background-size: cover;
 }
@@ -341,7 +344,7 @@ export default {
   align-items: start;
 }
 .product__img {
-  background: url('../../img/product-zx7-speaker/tablet/image-product.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/tablet/image-product.jpg')no-repeat center;
   background-size: contain;
   background-repeat: no-repeat;
   width: 280px;
@@ -368,21 +371,21 @@ export default {
   margin-right: 30px;
 }
 .product__photo-first {
-  background: url('../../img/product-zx7-speaker/tablet/image-gallery-1.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/tablet/image-gallery-1.jpg')no-repeat center;
   width: 274px;
   height: 175px;
   background-size: cover;
   margin-bottom: 17px;
 }
 .product__photo-second {
-  background: url('../../img/product-zx7-speaker/tablet/image-gallery-2.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/tablet/image-gallery-2.jpg')no-repeat center;
   width: 274px;
   height: 175px;
   background-size: cover;
   margin: 0;
 }
 .product__photo-third {
-  background: url('../../img/product-zx7-speaker/tablet/image-gallery-3.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/tablet/image-gallery-3.jpg')no-repeat center;
   width: 100%;
   height: 368px;
   background-size: cover;
@@ -407,7 +410,7 @@ export default {
   height: 320px;
 }
 .shared__img-first {
-  background: url('../../img/shared/tablet/image-zx9-speaker.jpg')no-repeat center;
+  background: url('../../img/shared/tablet/image-zx7-speaker.jpg')no-repeat center;
   background-size: contain;
 
 }
@@ -449,7 +452,7 @@ export default {
   margin: 0;
 }
 .product__img {
-  background: url('../../img/product-zx7-speaker/desktop/image-product.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/desktop/image-product.jpg')no-repeat center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
@@ -501,21 +504,21 @@ export default {
 }
 
 .product__photo-first {
-  background: url('../../img/product-zx7-speaker/desktop/image-gallery-1.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/desktop/image-gallery-1.jpg')no-repeat center;
   width: 480px;
   height: 175px;
   background-size: cover;
   margin-bottom: 17px;
 }
 .product__photo-second {
-  background: url('../../img/product-zx7-speaker/desktop/image-gallery-2.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/desktop/image-gallery-2.jpg')no-repeat center;
   width: 480px;
   height: 175px;
   background-size: cover;
   margin: 0;
 }
 .product__photo-third {
-  background: url('../../img/product-zx7-speaker/desktop/image-gallery-3.jpg')no-repeat center;
+  background: url('../../img/product-zx9-speaker/desktop/image-gallery-3.jpg')no-repeat center;
   width: 100%;
   height: 368px;
   background-size: cover;
