@@ -1,6 +1,5 @@
 <template>
   <div>
-    <app-header></app-header>
     <div>
       <section class="product-wrapper">
         <div class="container">
@@ -15,7 +14,8 @@
               <div class="product__footer">
                 <div class="cart-amount"><i class="inc-dec-button" @click="decreaseTotal">-</i>
                   <p >{{total}}</p><i class="inc-dec-button" @click="increaseTotal">+</i>
-                </div><button class="button product__button">Add to Product</button>
+                </div>
+                <button class="button product__button" @click="addToCartHandler">Add to Product</button>
               </div>
             </div>
           </div>
@@ -45,15 +45,16 @@
           <h3 class="shared-title">You May Also Like</h3>
           <div class="shared-wrapper">
             <div class="shared">
-              <div class="shared__img shared__img-first"></div>
+              <img class="shared__img" src="../../img/shared/mobile/image-zx9-speaker.jpg" alt="">
+              
               <h4 class="shared__product-name">ZX9 SPEAKER</h4><a href="" class="button">See product</a>
             </div>
             <div class="shared">
-              <div class="shared__img shared__img-second"></div>
+              <img class="shared__img" src="../../img/shared/mobile/image-xx99-mark-one-headphones.jpg" alt="">
               <h4 class="shared__product-name">XX99 MARK I</h4><a href="" class="button">See product</a>
             </div>
             <div class="shared">
-              <div class="shared__img shared__img-third"></div>
+              <img class="shared__img" src="../../img/shared/mobile/image-xx59-headphones.jpg" alt="">
               <h4 class="shared__product-name">XX59</h4><a href="" class="button">See product</a>
             </div>
           </div>
@@ -63,15 +64,12 @@
         </div>
       </section>
     </div>
-    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
   // Imports
   import Menu from '../Menu.vue';
-  import Header from '../Header.vue';
-  import Footer from '../Footer.vue';
   import About from '../About.vue';
   import Category from '../Category.vue';
   import data from "../../data.json";
@@ -79,14 +77,12 @@
     name: 'Product',
     components: {
       'app-menu': Menu,
-      'app-header': Header,
-      'app-footer': Footer,
       'app-category': Category,
       'app-about': About,
     },
     data() {
       return {
-        total: 1,
+        total : 1,
         products: data,
         windowSize: null,
         headphones: [{
@@ -113,11 +109,6 @@
             img: 'zx7.jpg'
           },
         ],
-        productImg: {
-          backgroundImage: `url(${require('../../img/product-zx7-speaker/mobile/image-product.jpg')
-            }
-            )`
-        }
       }
     },
     computed: {
@@ -225,6 +216,7 @@
       window.addEventListener("resize", this.setWindowSize);
       window.scrollTo(0, 0);
     },
+    props: {},
   }
 </script>
 
@@ -394,18 +386,7 @@
     border-radius: 10px;
     margin-bottom: 32px;
   }
-  .shared__img-first {
-    background: url('../../img/shared/mobile/image-zx7-speaker.jpg')no-repeat center;
-    background-size: contain;
-  }
-  .shared__img-second {
-    background: url('../../img/shared/mobile/image-xx99-mark-one-headphones.jpg')no-repeat center;
-    background-size: contain;
-  }
-  .shared__img-third {
-    background: url('../../img/shared/mobile/image-xx59-headphones.jpg')no-repeat center;
-    background-size: contain;
-  }
+
   .shared__product-name {
     margin-bottom: 32px;
     font-size: 24px;
@@ -479,18 +460,6 @@
       width: 250px;
       height: 320px;
     }
-    .shared__img-first {
-      background: url('../../img/shared/tablet/image-zx9-speaker.jpg')no-repeat center;
-      background-size: contain;
-    }
-    .shared__img-second {
-      background: url('../../img/shared/tablet/image-xx99-mark-one-headphones.jpg')no-repeat center;
-      background-size: contain;
-    }
-    .shared__img-third {
-      background: url('../../img/shared/tablet/image-xx59-headphones.jpg')no-repeat center;
-      background-size: contain;
-    }
   }
   @media screen and (min-width: 1100px) {
     .product {
@@ -558,18 +527,6 @@
     }
     .shared:not(:last-child) {
       margin-right: 30px;
-    }
-    .shared__img-first {
-      background: url('../../img/shared/desktop/image-zx7-speaker.jpg')no-repeat center;
-      background-size: contain;
-    }
-    .shared__img-second {
-      background: url('../../img/shared/desktop/image-xx99-mark-one-headphones.jpg')no-repeat center;
-      background-size: contain;
-    }
-    .shared__img-third {
-      background: url('../../img/shared/desktop/image-xx59-headphones.jpg')no-repeat center;
-      background-size: contain;
     }
   }
 </style>

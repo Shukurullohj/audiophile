@@ -1,6 +1,5 @@
 <template>
     <div>
-        <app-header></app-header>
           <div>
             <section class="categories">
               <div class="container">
@@ -21,23 +20,18 @@
             </section>
           </div>
         
-        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
 // Imports
 import Menu from '../Menu.vue';
-import Header from '../Header.vue';
-import Footer from '../Footer.vue';
 import About from '../About.vue';
 import Category from '../Category.vue';
 
 export default {
     components: {
         'app-menu': Menu,
-        'app-header': Header,
-        'app-footer': Footer,
         'app-category': Category,
         'app-about': About,
     },

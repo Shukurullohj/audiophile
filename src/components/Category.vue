@@ -4,26 +4,26 @@
             <div class="category__item">
                 <img class="category__img" width="80" height="104" src="../img/headphone-icon.svg" alt="">
                 <p class="category__text">headphones</p>
-                <button class="button-shop">
+                <router-link to="/headphones" ><button class="button-shop">
                 <p class="button-shop__text">shop</p>
                 <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-                </button>
+                </button></router-link>
             </div>
             <div class="category__item">
                 <img class="category__img" width="80" height="104" src="../img/speaker-icon.svg" alt="">
                 <p class="category__text">speakers</p>
-                <button class="button-shop">
+                <router-link to="/speakers" ><button class="button-shop">
                 <p class="button-shop__text">shop</p>
                 <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-                </button>
+                </button></router-link>
             </div>
             <div class="category__item">
                 <img class="category__img" width="80" height="104" src="../img/earphone-icon.svg" alt="">
                 <p class="category__text">earphones</p>
-                <button class="button-shop">
+                <router-link to="/earphones" ><button class="button-shop">
                 <p class="button-shop__text">shop</p>
                 <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-                </button>
+                </button></router-link>
             </div>
         </div>
     </div>

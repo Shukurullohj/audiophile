@@ -1,6 +1,5 @@
 <template>
     <div>
-        <app-header></app-header>
           <div>
             <section class="categories">
               <div class="container">
@@ -20,24 +19,18 @@
               </div>
             </section>
           </div>
-        
-        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
 // Imports
 import Menu from '../Menu.vue';
-import Header from '../Header.vue';
-import Footer from '../Footer.vue';
 import About from '../About.vue';
 import Category from '../Category.vue';
 
 export default {
     components: {
         'app-menu': Menu,
-        'app-header': Header,
-        'app-footer': Footer,
         'app-category': Category,
         'app-about': About,
     },
@@ -67,8 +60,8 @@ export default {
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
-  margin-left: -28px;
-  margin-right: -28px;
+  margin-left: -24px;
+  margin-right: -24px;
   margin-bottom: 64px;
 }
 

@@ -1,28 +1,24 @@
 <template>
     <div>
-        <app-header></app-header>
-        <app-ninjas></app-ninjas>
-        <app-footer></app-footer>
+      
+        <app-hero></app-hero>
+        
     </div>
 </template>
 
 <script>
 // Imports
-import Header from '../Header.vue';
-import Footer from '../Footer.vue';
-import Ninjas from '../Ninjas.vue';
+import Hero from '../Hero.vue';
 
 
 export default {
     components: {
-        'app-header': Header,
-        'app-footer': Footer,
-        'app-ninjas': Ninjas
+        'app-hero': Hero,
     },
-    data () {
-        return {
-          
-        }
+    data() {
+      return {
+        ninjas : [{name : 'ninka'}]
+      }
     },
     methods: {
       
@@ -48,7 +44,6 @@ html {
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
-
 *,
 *::before,
 *::after {
@@ -65,7 +60,7 @@ body {
   line-height: 25px;
   font-size: 15px;
   font-family: 'Manrope', "Arial", sans-serif;
-  background-color: var(--color-white);
+  background-color: var(--color-white-light);
   color: var(--color-dark);
 }
 

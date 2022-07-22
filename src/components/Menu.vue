@@ -1,50 +1,50 @@
 <template>
-    <div>
-      <div v-if="showMenu" class="menu">
-          <div class="menu__list">
-              <div class="menu__item">
-                  <img class="menu__img" width="80" height="104" src="../img/headphone-icon.svg" alt="">
-                  <p class="menu__text">headphones</p>
-                  <button class="button-shop">
-                  <p class="button-shop__text">shop</p>
-                  <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-                  </button>
-              </div>
-              <div class="menu__item">
-                  <img class="menu__img" width="80" height="104" src="../img/speaker-icon.svg" alt="">
-                  <p class="menu__text">speakers</p>
-                  <button class="button-shop">
-                  <p class="button-shop__text">shop</p>
-                  <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-                  </button>
-              </div>
-              <div class="menu__item">
-                  <img class="menu__img" width="80" height="104" src="../img/earphone-icon.svg" alt="">
-                  <p class="menu__text">earphones</p>
-                  <button class="button-shop">
-                  <p class="button-shop__text">shop</p>
-                  <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2"/></svg>
-                  </button>
-              </div>
-          </div>
+  <div>
+    <div v-if="showMenu" class="menu">
+      <div class="menu__list">
+        <div class="menu__item">
+          <img class="menu__img" width="80" height="104" src="../img/headphone-icon.svg" alt="">
+          <p class="menu__text">headphones</p>
+          <router-link to="/headphones" class="button-shop">
+            <p class="button-shop__text">shop</p>
+            <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2" /></svg>
+          </router-link>
+        </div>
+        <div class="menu__item">
+          <img class="menu__img" width="80" height="104" src="../img/speaker-icon.svg" alt="">
+          <p class="menu__text">speakers</p>
+          <router-link to="/speakers" class="button-shop">
+            <p class="button-shop__text">shop</p>
+            <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2" /></svg>
+          </router-link>
+        </div>
+        <div class="menu__item">
+          <img class="menu__img" width="80" height="104" src="../img/earphone-icon.svg" alt="">
+          <p class="menu__text">earphones</p>
+          <router-link to="/speakers" class="button-shop">
+            <p class="button-shop__text">shop</p>
+            <svg width="7" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="m1.322 1 5 5-5 5" stroke="#D87D4A" stroke-width="2" /></svg>
+          </router-link>
+        </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
-
-export default {
-    data () {
-        return {
-          showMenu : false
-        }
+  export default {
+    data() {
+      return {
+        showMenu: false
+      }
     },
-}
+  }
 </script>
 
 <style>
-
-
   .menu {
     position: absolute;
     z-index: 9998;
@@ -96,9 +96,10 @@ export default {
     margin: 0;
     margin-bottom: 20px;
   }
-@media screen and (min-width:768px) {
 
-  .menu__list {
+  @media screen and (min-width:768px) {
+
+    .menu__list {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -115,11 +116,11 @@ export default {
       margin-bottom: 0;
       margin-right: 10px;
     }
-}
+  }
 
-@media screen and (min-width:1100px) {
-  .menu {
+  @media screen and (min-width:1100px) {
+    .menu {
       display: none;
     }
-}
+  }
 </style>

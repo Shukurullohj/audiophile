@@ -1,6 +1,9 @@
 <template>
     <div>
-        <router-view></router-view>
+        <app-header></app-header>
+        <router-view
+        ></router-view>
+        <app-footer></app-footer>
     </div>
 </template>
 
@@ -8,28 +11,20 @@
 // Imports
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
-import Ninjas from './components/Ninjas.vue';
+import data from "./data.json";
 
 export default {
     components: {
         'app-header': Header,
         'app-footer': Footer,
-        'app-ninjas': Ninjas
     },
-    data () {
-        return {
-          ninjas: [
-              {name: 'Ryu', speciality: 'Vue Components', show: false},
-              {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
-              {name: 'Hitoshi', speciality: 'Click Events', show: false},
-              {name: 'Tango', speciality: 'Conditionals', show: false},
-              {name: 'Kami', speciality: 'Webpack', show: false},
-              {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-          ],
-        }
+    data() {
+      return {
+        products: data,
+      }
     },
     methods: {
-      
+     
     }
 }
 </script>
@@ -68,7 +63,7 @@ body {
   line-height: 25px;
   font-size: 15px;
   font-family: 'Manrope', "Arial", sans-serif;
-  background-color: var(--color-white);
+  background-color: var(--color-white-light);
   color: var(--color-dark);
 }
 
